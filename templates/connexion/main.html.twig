@@ -4,65 +4,36 @@
 {% block javascripts %}{% endblock %}
 {% block body %}
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="login-content">
-                <form action="{{ path('security_login') }}" method="post">
-                    {% if error %}
-                        <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                    {% endif %}
-                    <h2>Bienvenue</h2>
-                    <div class="input-div one">
-                        <div class="i">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="div">
-                            <h5>Utilisateur</h5>
-                            <input type="text" class="input" required name="_username">
-                        </div>
-                    </div>
-                    <div class="input-div pass">
-                        <div class="i">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="div">
-                            <h5>Mot de passe</h5>
-                            <input type="password" class="input" required name="_password">
-                        </div>
-                    </div>
-                    <a class="mdp-oublie" href="#">Mot de passe oublié ?</a>
-                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-                    <input type="submit" class="btn btn-outline-primary btn-lg" value="Connexion">
-                </form>
+<div class="row m-0 h-100">
+    <div class="col p-0 text-center d-flex justify-content-center align-items-center display-none">
+        <img src="{{ asset('build/images/logo_mediathalesWS.png') }}" class="w-100" alt="logo en grand">
+    </div>
+    <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
+        <form class="w-75" action="#">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username"
+                       required>
             </div>
-        </div>
-        <div class="col-lg-8 logo">
-            <img class="img-logo" src="{{ asset('images/logo_mediatheque.png') }}" alt="logo">
-        </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Password</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="password"
+                       required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Keep me logged in
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-custom btn-lg btn-block mt-3">Login Now</button>
+        </form>
     </div>
 </div>
-<script>
-    const inputs = document.querySelectorAll(".input");
-
-    function addcl(){
-        let parent = this.parentNode.parentNode;
-        parent.classList.add("focus");
-    }
-
-    function remcl(){
-        let parent = this.parentNode.parentNode;
-        if(this.value === ''){
-            parent.classList.remove("focus");
-        }
-    }
-
-
-    inputs.forEach(input => {
-        input.addEventListener("focus", addcl);
-        input.addEventListener("blur", remcl);
-    });
-
-</script>
 </body>
 {% endblock body %}
+{% block footer %} {% endblock footer %}

@@ -8,9 +8,8 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 import './styles/connexion.css';
-import './styles/footer.css';
-
-import './styles/responsive/connexion.css';
+import 'bootstrap/dist/js/bootstrap';
+import  'bootstrap/dist/css/bootstrap.css'
 
 // start the Stimulus application
 import './bootstrap';
@@ -18,5 +17,3 @@ import './controllers/connexion';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-
-import '../node_modules/bootstrap/dist/css/bootstrap.css';

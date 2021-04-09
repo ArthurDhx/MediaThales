@@ -2,13 +2,6 @@
     --main-color: #FAFAFA;
     --second-color: #25737d;
 }
-*{
-    font-family: 'Roboto', sans-serif;
-    --main-color:#FAFAFA;
-    --second-color:#25737d;
-    --placeholder: #FAFAFA;
-}
-
 body {
     background: #FAFAFA;
 }
