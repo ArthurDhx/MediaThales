@@ -59,5 +59,70 @@ class Annonce
      */
     private $staff;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTitre(): ?string
+    {
+        return $this->titre;
+    }
+
+    public function setTitre(string $titre): self
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getContenu(): ?string
+    {
+        return $this->contenu;
+    }
+
+    public function setContenu(string $contenu): self
+    {
+        $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    public function getDateCreation(): ?\DateTimeInterface
+    {
+        return $this->dateCreation;
+    }
+
+    public function setDateCreation(\DateTimeInterface $dateCreation): self
+    {
+        $this->dateCreation = $dateCreation;
+
+        return $this;
+    }
+
+    public function getVignette(): ?string
+    {
+        return $this->vignette;
+    }
+
+    public function setVignette(?string $vignette): self
+    {
+        $this->vignette = $vignette;
+
+        return $this;
+    }
+
+    public function getStaff(): ?User
+    {
+        return $this->staff;
+    }
+
+    public function setStaff(?User $staff): self
+    {
+        $this->staff = $staff;
+
+        return $this;
+    }
+
 
 }

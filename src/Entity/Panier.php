@@ -51,5 +51,46 @@ class Panier
      */
     private $utilisateur;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Article $article): self
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    public function getTypeEnregistrement(): ?TypeEnregistrement
+    {
+        return $this->typeEnregistrement;
+    }
+
+    public function setTypeEnregistrement(?TypeEnregistrement $typeEnregistrement): self
+    {
+        $this->typeEnregistrement = $typeEnregistrement;
+
+        return $this;
+    }
+
+    public function getUtilisateur(): ?User
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?User $utilisateur): self
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
 
 }

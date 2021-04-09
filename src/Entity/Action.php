@@ -58,5 +58,58 @@ class Action
      */
     private $staff;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getTypeAction(): ?TypeAction
+    {
+        return $this->typeAction;
+    }
+
+    public function setTypeAction(?TypeAction $typeAction): self
+    {
+        $this->typeAction = $typeAction;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Article $article): self
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    public function getStaff(): ?User
+    {
+        return $this->staff;
+    }
+
+    public function setStaff(?User $staff): self
+    {
+        $this->staff = $staff;
+
+        return $this;
+    }
+
 
 }

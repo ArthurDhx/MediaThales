@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -191,6 +193,263 @@ class Article
         $this->entite = new \Doctrine\Common\Collections\ArrayCollection();
         $this->rubrique = new \Doctrine\Common\Collections\ArrayCollection();
         $this->tag = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getGencode(): ?string
+    {
+        return $this->gencode;
+    }
+
+    public function setGencode(?string $gencode): self
+    {
+        $this->gencode = $gencode;
+
+        return $this;
+    }
+
+    public function getCodeArticle(): ?string
+    {
+        return $this->codeArticle;
+    }
+
+    public function setCodeArticle(string $codeArticle): self
+    {
+        $this->codeArticle = $codeArticle;
+
+        return $this;
+    }
+
+    public function getTitre(): ?string
+    {
+        return $this->titre;
+    }
+
+    public function setTitre(string $titre): self
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getVignette(): ?string
+    {
+        return $this->vignette;
+    }
+
+    public function setVignette(?string $vignette): self
+    {
+        $this->vignette = $vignette;
+
+        return $this;
+    }
+
+    public function getDatePublication(): ?\DateTimeInterface
+    {
+        return $this->datePublication;
+    }
+
+    public function setDatePublication(?\DateTimeInterface $datePublication): self
+    {
+        $this->datePublication = $datePublication;
+
+        return $this;
+    }
+
+    public function getMontantObtention(): ?string
+    {
+        return $this->montantObtention;
+    }
+
+    public function setMontantObtention(string $montantObtention): self
+    {
+        $this->montantObtention = $montantObtention;
+
+        return $this;
+    }
+
+    public function getMontantCaution(): ?string
+    {
+        return $this->montantCaution;
+    }
+
+    public function setMontantCaution(?string $montantCaution): self
+    {
+        $this->montantCaution = $montantCaution;
+
+        return $this;
+    }
+
+    public function getMontantVente(): ?string
+    {
+        return $this->montantVente;
+    }
+
+    public function setMontantVente(string $montantVente): self
+    {
+        $this->montantVente = $montantVente;
+
+        return $this;
+    }
+
+    public function getObservation(): ?string
+    {
+        return $this->observation;
+    }
+
+    public function setObservation(?string $observation): self
+    {
+        $this->observation = $observation;
+
+        return $this;
+    }
+
+    public function getNumerique(): ?bool
+    {
+        return $this->numerique;
+    }
+
+    public function setNumerique(bool $numerique): self
+    {
+        $this->numerique = $numerique;
+
+        return $this;
+    }
+
+    public function getGenre(): ?Genre
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(?Genre $genre): self
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    public function getTrancheAge(): ?TrancheAge
+    {
+        return $this->trancheAge;
+    }
+
+    public function setTrancheAge(?TrancheAge $trancheAge): self
+    {
+        $this->trancheAge = $trancheAge;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getStatut(): ?Statut
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(?Statut $statut): self
+    {
+        $this->statut = $statut;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Entite[]
+     */
+    public function getEntite(): Collection
+    {
+        return $this->entite;
+    }
+
+    public function addEntite(Entite $entite): self
+    {
+        if (!$this->entite->contains($entite)) {
+            $this->entite[] = $entite;
+        }
+
+        return $this;
+    }
+
+    public function removeEntite(Entite $entite): self
+    {
+        $this->entite->removeElement($entite);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Rubrique[]
+     */
+    public function getRubrique(): Collection
+    {
+        return $this->rubrique;
+    }
+
+    public function addRubrique(Rubrique $rubrique): self
+    {
+        if (!$this->rubrique->contains($rubrique)) {
+            $this->rubrique[] = $rubrique;
+        }
+
+        return $this;
+    }
+
+    public function removeRubrique(Rubrique $rubrique): self
+    {
+        $this->rubrique->removeElement($rubrique);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getTag(): Collection
+    {
+        return $this->tag;
+    }
+
+    public function addTag(Tag $tag): self
+    {
+        if (!$this->tag->contains($tag)) {
+            $this->tag[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): self
+    {
+        $this->tag->removeElement($tag);
+
+        return $this;
     }
 
 }

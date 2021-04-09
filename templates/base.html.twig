@@ -3,17 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+        {{ encore_entry_link_tags('app') }}
+        {% block stylesheets %}{% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
     </body>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="#" class="lien">Mention Légales</a>
+                </div>
+                <div class="col-sm">
+                    <a href="{# {{ path('contact') }} #}" class="lien">Nous contacter</a>
+                </div>
+            </div>
+            <small><i>© {{ "now"|date("Y") }} Copyright | V 2.0.0 | Médiathèque Thales - Brest</i></small>
+        </div>
+    </footer>
+
+    {{ encore_entry_script_tags('app') }}
 </html>

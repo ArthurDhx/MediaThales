@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -124,6 +126,155 @@ class Enregistrement
     public function __construct()
     {
         $this->user = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getNoCommande(): ?string
+    {
+        return $this->noCommande;
+    }
+
+    public function setNoCommande(string $noCommande): self
+    {
+        $this->noCommande = $noCommande;
+
+        return $this;
+    }
+
+    public function getDatePreparationFini(): ?\DateTimeInterface
+    {
+        return $this->datePreparationFini;
+    }
+
+    public function setDatePreparationFini(?\DateTimeInterface $datePreparationFini): self
+    {
+        $this->datePreparationFini = $datePreparationFini;
+
+        return $this;
+    }
+
+    public function getDateEnregistrement(): ?\DateTimeInterface
+    {
+        return $this->dateEnregistrement;
+    }
+
+    public function setDateEnregistrement(\DateTimeInterface $dateEnregistrement): self
+    {
+        $this->dateEnregistrement = $dateEnregistrement;
+
+        return $this;
+    }
+
+    public function getDateRendu(): ?\DateTimeInterface
+    {
+        return $this->dateRendu;
+    }
+
+    public function setDateRendu(?\DateTimeInterface $dateRendu): self
+    {
+        $this->dateRendu = $dateRendu;
+
+        return $this;
+    }
+
+    public function getDateRenduTheorique(): ?\DateTimeInterface
+    {
+        return $this->dateRenduTheorique;
+    }
+
+    public function setDateRenduTheorique(\DateTimeInterface $dateRenduTheorique): self
+    {
+        $this->dateRenduTheorique = $dateRenduTheorique;
+
+        return $this;
+    }
+
+    public function getNoteCommunication(): ?string
+    {
+        return $this->noteCommunication;
+    }
+
+    public function setNoteCommunication(?string $noteCommunication): self
+    {
+        $this->noteCommunication = $noteCommunication;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Article $article): self
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    public function getTypeEnregistrement(): ?TypeEnregistrement
+    {
+        return $this->typeEnregistrement;
+    }
+
+    public function setTypeEnregistrement(?TypeEnregistrement $typeEnregistrement): self
+    {
+        $this->typeEnregistrement = $typeEnregistrement;
+
+        return $this;
+    }
+
+    public function getStatutEnregistrement(): ?StatutEnregistrement
+    {
+        return $this->statutEnregistrement;
+    }
+
+    public function setStatutEnregistrement(?StatutEnregistrement $statutEnregistrement): self
+    {
+        $this->statutEnregistrement = $statutEnregistrement;
+
+        return $this;
+    }
+
+    public function getUtilisateur(): ?User
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?User $utilisateur): self
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUser(): Collection
+    {
+        return $this->user;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->user->contains($user)) {
+            $this->user[] = $user;
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        $this->user->removeElement($user);
+
+        return $this;
     }
 
 }
