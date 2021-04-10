@@ -3,8 +3,6 @@
 
 namespace App\Security;
 
-use App\Repository\PanierRepository;
-use App\Repository\StatutRepository;
 use App\Service\EmptyPanier;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;

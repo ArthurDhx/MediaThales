@@ -6,6 +6,7 @@ use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
@@ -13,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D6499C598BFA", columns={"email_recup"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649F85E0677", columns={"username"})}, indexes={@ORM\Index(name="IDX_8D93D649A4AEAFEA", columns={"entreprise_id"}), @ORM\Index(name="IDX_8D93D64957889920", columns={"fonction_id"})})
  * @ORM\Entity
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -626,4 +627,12 @@ class User
         return $this;
     }
 
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function eraseCredentials()
+    {
+    }
 }

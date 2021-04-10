@@ -9,16 +9,21 @@
         <img src="{{ asset('build/images/logo_mediathalesWS.png') }}" class="w-100" alt="logo en grand">
     </div>
     <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
-        <form class="w-75" action="#">
+        <form class="w-75" action="{{ path('security_login') }}" method="post" >
+            {% if error %}
+                <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username"
+                <i class="fas fa-user"></i>
+                <label for="exampleFormControlInput1" class="form-label">Utilisateur</label>
+                <input value="{{ last_username }}" type="text" name="username" class="form-control" id="exampleFormControlInput1" placeholder="utilisateur"
                        required>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput2" class="form-label">Password</label>
-                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="password"
-                       required>
+                <i class="fas fa-lock"></i>
+                <label for="exampleFormControlInput2" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="password"
+                       required name="password">
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -30,7 +35,8 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-custom btn-lg btn-block mt-3">Login Now</button>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <button type="submit" class="btn btn-custom btn-lg btn-block mt-3">Connexion</button>
         </form>
     </div>
 </div>
