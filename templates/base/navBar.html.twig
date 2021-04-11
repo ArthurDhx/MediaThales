@@ -2,7 +2,7 @@
     <nav>
         <input type="checkbox" id="show-search">
         <div class="content" id="content">
-            <div class="burger" onclick="changeBars(this)">
+            <div class="burger" id="burger" >
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -45,21 +45,10 @@
                 <li><a href="#">Feedback</a></li>
             </ul>
         </div>
-        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <label for="show-search" class="search-icon"><i id="searchLoop" class="fas fa-search"></i></label>
         <form action="#" class="search-box">
             <input type="text" placeholder="Type Something to Search..." required>
             <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
         </form>
     </nav>
 </div>
-<script>
-    function changeBars(e) {
-        e.classList.toggle("change");
-        const wrapper = document.getElementById("wrapper");
-        const content = document.getElementById("content");
-        const links = document.getElementById("links");
-        content.classList.toggle("hideNav");
-        links.classList.toggle("hideNav");
-        wrapper.classList.toggle("fixed");
-    }
-</script>

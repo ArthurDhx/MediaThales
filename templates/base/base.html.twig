@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet"
   {% block stylesheets %}{% endblock %}
-
   {% block javascripts %}{% endblock %}
 </head>
 
@@ -16,7 +15,7 @@
   <body>
     {% block header %}
       <header>
-        {{ include('navBar.html.twig') }}
+        {{ include('base/navBar.html.twig') }}
       </header>
     {% endblock header %}
     <div>
@@ -40,7 +39,7 @@
   </body>
 {% endblock %}
 {% block footer %}
-  {{ include('footer.html.twig') }}
+  {{ include('base/footer.html.twig') }}
 {% endblock footer %}
 {{ encore_entry_script_tags('app') }}
 </html>

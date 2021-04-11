@@ -1,4 +1,4 @@
-import { Controller } from 'stimulus';
+import { Controller } from 'stimulus/dist/stimulus.umd';
 
 /*
  * This is an example Stimulus controller!

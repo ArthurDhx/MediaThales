@@ -16,6 +16,6 @@ class HomeController extends AbstractController
      * Affiche la page d' accueil
      */
     public function home(): Response {
-        return $this->render('base.html.twig');
+        return $this->render('./base/base.html.twig');
     }
 }

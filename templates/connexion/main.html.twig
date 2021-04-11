@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base/base.html.twig' %}
 {% block title %}Connexion{% endblock title %}
 {% block stylesheets %}{% endblock %}
 {% block javascripts %}{% endblock %}
@@ -6,7 +6,7 @@
 <body>
 <div class="row m-0 h-100">
     <div class="col p-0 text-center d-flex justify-content-center align-items-center display-none">
-        <img src="{{ asset('build/images/logo_mediathalesWS.png') }}" class="w-100" alt="logo en grand">
+        <img data-aos="fade-right" src="{{ asset('build/images/logo_mediathalesWS.png') }}" class="w-100" alt="logo en grand">
     </div>
     <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
         <form class="w-75" action="{{ path('security_login') }}" method="post" >
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-            <button type="submit" class="btn btn-custom btn-lg btn-block mt-3">Connexion</button>
+            <button type="submit" class="btn btn-outline-light btn-lg btn-block mt-3">Connexion</button>
         </form>
     </div>
 </div>

@@ -13,6 +13,13 @@ import './bootstrap';
 import 'bootstrap/dist/js/bootstrap';
 import  'bootstrap/dist/css/bootstrap.css'
 
+// importation du mouvement des images
+import AOS from 'aos/dist/aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 // importation des icones
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+import './js/nav';

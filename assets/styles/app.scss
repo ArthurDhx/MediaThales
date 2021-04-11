@@ -1,7 +1,8 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 @import "connexion.css";
-@import "navBar.css";
+@import "./base/navBar.css";
+@import "./base/footer.css";
 :root {
     --main-color: #FAFAFA;
     --second-color: #25737d;
@@ -9,6 +10,5 @@
 body {
     background: #FAFAFA;
 }
-$blockquote-footer-color: var(--second-color);
 
 
