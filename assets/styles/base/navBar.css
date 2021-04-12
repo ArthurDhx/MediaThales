@@ -12,12 +12,23 @@
 .wrapper nav{
   position: relative;
   display: flex;
-  max-width: calc(100% - 200px);
+  max-width: calc(100% - 100px);
   margin: 0 auto;
   height: 70px;
   align-items: center;
   justify-content: space-between;
 }
+
+nav a {
+  color: #FFFFFF!important;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover {
+  transform: scale(1.2);
+  color: black!important;
+}
+
 nav .content{
   display: flex;
   align-items: center;
@@ -102,6 +113,9 @@ ul.links {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+.search-box {
+  width: 95%!important;
+}
 .wrapper #show-search:checked ~ .search-box{
   opacity: 1;
   pointer-events: auto;
@@ -177,6 +191,9 @@ ul.links {
     max-width: 100%;
     padding: 0 20px;
   }
+  .search-box {
+    width: 90%!important;
+  }
   nav .content .links{
     margin-left: 30px;
   }
@@ -201,6 +218,9 @@ ul.links {
   }
   .wrapper #show-menu:checked ~ .menu-icon i::before{
     content: "\f00d";
+  }
+  .search-box {
+    width: 75%!important;
   }
   nav .content .links{
     display: block;

@@ -45,10 +45,11 @@
                 <li><a href="#">Feedback</a></li>
             </ul>
         </div>
-        <label for="show-search" class="search-icon"><i id="searchLoop" class="fas fa-search"></i></label>
         <form action="#" class="search-box">
             <input type="text" placeholder="Type Something to Search..." required>
-            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+            <button type="submit" class="go-icon grow"><i class="fas fa-long-arrow-alt-right"></i></button>
         </form>
+        <label for="show-search" class="search-icon ms-auto grow"><i id="searchLoop" class="fas fa-search"></i></label>
+        <a href="{{ path('security_logout') }}" class="grow"><i class="fas fa-sign-out-alt grow"></i></a>
     </nav>
 </div>
