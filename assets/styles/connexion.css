@@ -39,13 +39,13 @@ a:hover {
 }
 
 @media(max-width: 932px) {
-    .display-none {
+    div .display-none {
         display: none !important;
     }
 }
 
 @media screen and (max-width: 932px){
-    .display-none {
+    div .display-none {
         display: none !important;
     }
 }
