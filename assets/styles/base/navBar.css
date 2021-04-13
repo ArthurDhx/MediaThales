@@ -158,12 +158,19 @@ ul.links {
 }
 
 /* MEGA MENU */
-.dropdown-multicol2{
+.dropdown-multicol {
   width: 80%;
 }
 .dropdown-col{
   display:inline-block;
   width: 10%;
+}
+.dropdown-multicol2 {
+  width: 35%;
+}
+.dropdown-col2{
+  display:inline-block;
+  width: 30%;
 }
 /* Dropdown Menu code start */
 .content .links ul{
@@ -283,9 +290,11 @@ ul.links {
     background: none;
     display: none;
   }
-  .content .links #show-features:checked ~ ul,
-  .content .links #show-services:checked ~ ul,
-  .content .links #show-items:checked ~ ul{
+  .content .links #show-livre:checked ~ ul,
+  .content .links #show-video:checked ~ ul,
+  .content .links #show-musique:checked ~ ul,
+  .content .links #show-jeu:checked ~ ul,
+  .content .links #show-gestion:checked ~ ul{
     display: block;
   }
   .content .links ul{
