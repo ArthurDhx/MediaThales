@@ -1,11 +1,13 @@
 
 // fonction qui change la loupe en barre
-const showSearch = document.getElementById('show-search');
-if (showSearch != null) {
-    showSearch.addEventListener("click", () => {
-        const searchLoop = document.getElementById('searchLoop');
-        searchLoop.classList.toggle('fa-search');
-        searchLoop.classList.toggle('fa-times');
+const searchLoop = document.getElementById('searchLoop');
+if (searchLoop != null) {
+    searchLoop.addEventListener("click", () => {
+        const loop = document.getElementById('loop');
+        loop.classList.toggle('fa-search');
+        loop.classList.toggle('fa-times');
+        const formSearch = document.getElementById('form-search');
+        formSearch.classList.toggle('show-input-search');
     })
 
 }

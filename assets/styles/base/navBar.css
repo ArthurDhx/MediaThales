@@ -109,9 +109,6 @@ ul.links {
 .wrapper .menu-icon{
   display: none;
 }
-.wrapper #show-search:checked ~ .search-icon i::before{
-  content: "\f00d";
-}
 
 .wrapper .search-box{
   position: absolute;
@@ -125,9 +122,9 @@ ul.links {
 .search-box {
   width: 95%!important;
 }
-.wrapper #show-search:checked ~ .search-box{
-  opacity: 1;
-  pointer-events: auto;
+.show-input-search{
+  opacity: 1!important;
+  pointer-events: auto!important;
 }
 .search-box input{
   width: 100%;
