@@ -172,6 +172,11 @@ ul.links {
   display:inline-block;
   width: 30%;
 }
+
+.dataTables_wrapper {
+  position: static!important;
+}
+
 /* Dropdown Menu code start */
 .content .links ul{
   position: absolute;

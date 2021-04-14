@@ -23,3 +23,9 @@ import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 import './js/nav';
+
+import $ from 'jquery';
+
+window.$ = $;
+
+
