@@ -29,10 +29,17 @@ if (burger != null) {
         const wrapper = document.getElementById("wrapper");
         const content = document.getElementById("content");
         const links = document.getElementById("links");
-        
+
         // on cache l'affichage normal
         content.classList.toggle("hideNav");
         links.classList.toggle("hideNav");
         wrapper.classList.toggle("fixed");
+
+        const body = document.getElementById("main");
+        if (body.style.display === "none") {
+            body.style.display = "block";
+        } else {
+            body.style.display = "none";
+        }
     })
 }
