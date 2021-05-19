@@ -4,3 +4,4 @@
 /var/logs/*
 /var/sessions/*
 /node_modules/
+/public/build/
