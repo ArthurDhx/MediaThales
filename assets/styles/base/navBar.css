@@ -173,6 +173,9 @@ ul.links {
   width: 30%;
 }
 
+.hideData{
+  z-index: -1;
+}
 
 /* Dropdown Menu code start */
 .content .links ul{

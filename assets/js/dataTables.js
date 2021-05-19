@@ -4,8 +4,8 @@ import 'datatables.net-bs4/js/dataTables.bootstrap4';
 
 $(document).ready(() => {
     $.noConflict();
-    var myEle = $('#example');
-    if(myEle){
+    const myEle = $('#example');
+    if (myEle){
         myEle.DataTable({
             "language": {
                 "emptyTable": "Aucune donnée disponible dans le tableau",
