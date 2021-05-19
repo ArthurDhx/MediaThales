@@ -173,10 +173,6 @@ ul.links {
   width: 30%;
 }
 
-.hideData{
-  z-index: -1;
-}
-
 /* Dropdown Menu code start */
 .content .links ul{
   position: absolute;
@@ -262,6 +258,11 @@ ul.links {
     padding-bottom: 100px;
     transition: all 0.3s ease;
   }
+
+  ul {
+    padding-left: 0 !important;
+  }
+
   nav #show-menu:checked ~ .content .links{
     left: 0;
   }
