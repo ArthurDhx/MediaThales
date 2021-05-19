@@ -5,3 +5,8 @@
 .form-control-sm {
     font-size: 1rem!important;
 }
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    position: relative;
+    z-index: -1;
+}

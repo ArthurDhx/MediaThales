@@ -159,18 +159,16 @@ ul.links {
 
 /* MEGA MENU */
 .dropdown-multicol {
-  width: 80%;
+  width: 70%;
 }
 .dropdown-col{
   display:inline-block;
-  width: 10%;
 }
 .dropdown-multicol2 {
   width: 35%;
 }
 .dropdown-col2{
   display:inline-block;
-  width: 30%;
 }
 
 /* Dropdown Menu code start */
@@ -205,10 +203,20 @@ ul.links {
 .content .links ul li:hover ul{
   top: 0;
 }
+.hr {
+  width: 200px;
+  height: 10px!important;
+  margin: 5% 10px 0 10px;
+  color: #FFFFFF;
+  line-height: 70px;
+}
 
 
 /* Responsive code start */
 @media screen and (max-width: 1250px){
+  .hr {
+    width: 100px;
+  }
   .wrapper nav{
     max-width: 100%;
     padding: 0 20px;
@@ -227,6 +235,16 @@ ul.links {
   }
   .wrapper .search-box input{
     padding: 0 100px 0 15px;
+  }
+  .dropdown-multicol2 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 25%;
+    font-size: 0.875rem;
+  }
+  .dropdown-multicol {
+    width: 55%;
+    font-size: 0.875rem;
   }
 }
 
